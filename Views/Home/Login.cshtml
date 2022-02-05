@@ -1,0 +1,28 @@
+@model IEnumerable<MyReddit.Models.User>
+
+  
+    
+
+ <div class="card" style="max-width: 35rem;">
+  <div class="card-header text-center fw-bold bg-info" style="font-size-base: 2rem; font-weight: bold">
+    Login
+  </div>
+  <div class="card-body"  > 
+   <form  action="/Home/Login" method="post">
+        <div class="mb-3">
+            <label for="email" class="form-label" style="font-size-base: 2rem; font-weight: bold">Courriel</label>
+            <input type="email" class="form-control" id="email" name="email"/>
+            <label  class="alert-danger">@ViewBag.Message</label>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label" style="font-size-base: 2rem; font-weight: bold">Mot de passe</label>
+            <input type="password" class="form-control" id="password" name="password">
+            
+            <label class="alert-danger">@ViewBag.Message</label>
+        </div>
+        
+        <button type="submit" class="btn btn-info">Login</button>
+        <p>Vous n'avez pas encore de compte? <a href="/Home/Signup">Inscrivez-vous</a></p>
+    </form> 
+    </div>
